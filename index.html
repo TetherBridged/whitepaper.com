@@ -380,6 +380,8 @@
     flex-direction: column;
     gap: .6rem;
     z-index: 200;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
   }
   .wp-action-btn {
     background: var(--bg3);
@@ -420,6 +422,46 @@
     .wp-content { padding: 2rem 1.5rem; }
     .wp-nav-links { display: none; }
   }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .wp-content { padding: 2rem 2rem; }
+    .wp-sidebar { width: 200px; }
+  }
+  @media (max-width: 768px) {
+    .wp-layout { flex-direction: column; }
+    .wp-sidebar { display: none; }
+    .wp-content { padding: 1.5rem 1.2rem; max-width: 100%; }
+    .wp-nav { padding: 0 1rem; height: 56px; }
+    .wp-nav-links { display: none; }
+    .wp-nav-brand { font-size: .78rem; }
+    .btn-back { padding: 6px 12px; font-size: .72rem; }
+    .cover-title { font-size: 1.6rem; }
+    .cover-logo { width: 64px; height: 64px; border-radius: 14px; }
+    .wp-h1 { font-size: 1.15rem; }
+    .wp-table { font-size: .78rem; }
+    .wp-table th, .wp-table td { padding: 7px 10px; }
+    .stat-chips { gap: .5rem; }
+    .chip { padding: .5rem .9rem; }
+    .chip .cv { font-size: .95rem; }
+    .wp-actions { bottom: 1rem; right: 1rem; gap: .4rem; }
+    .wp-action-btn { padding: 8px 12px; font-size: .72rem; }
+    .wp-phase-header { flex-direction: column; align-items: flex-start; gap: .4rem; }
+    .wp-abstract { font-size: .85rem; }
+  }
+  @media (max-width: 480px) {
+    .wp-content { padding: 1rem .9rem; }
+    .wp-nav { padding: 0 .8rem; }
+    .cover-title { font-size: 1.3rem; }
+    .cover-contract { font-size: .68rem; padding: 8px 12px; }
+    .wp-h1 { font-size: 1rem; }
+    .wp-h2 { font-size: .9rem; }
+    .wp-p { font-size: .85rem; }
+    .wp-actions { right: .5rem; bottom: .5rem; }
+    .stat-chips { flex-direction: column; }
+    .wp-table th, .wp-table td { padding: 6px 8px; font-size: .72rem; }
+  }
+
 </style>
 </head>
 <body>
@@ -681,7 +723,10 @@
 <!-- FLOATING ACTIONS -->
 <div class="wp-actions">
   <a class="wp-action-btn" href="https://tetherbridged.github.io/.com/" target="_blank">🏠 Main Site</a>
-  <button class="wp-action-btn" onclick="window.print()">🖨 Print / Save PDF</button>
+  <a class="wp-action-btn" href="https://top100token.com/binance/0xca1df182e5f9d59149057e15a98f95e3de9e0877" target="_blank">📊 Top100Token</a>
+  <a class="wp-action-btn" href="https://coinboom.net/coin/tether-usd-bridged-zed20-6" target="_blank">🚀 CoinBoom</a>
+  <a class="wp-action-btn" href="https://poocoin.app/tokens/0xca1df182e5f9d59149057e15a98f95e3de9e0877" target="_blank">💩 PooCoin</a>
+  <button class="wp-action-btn" onclick="window.print()">🖨 Print / PDF</button>
   <a class="wp-action-btn primary" href="https://bscscan.com/token/0xcA1Df182E5F9d59149057E15A98f95E3De9e0877" target="_blank">View on BscScan →</a>
 </div>
 
